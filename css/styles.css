@@ -1,0 +1,237 @@
+/* header */
+
+.header {
+	background: var(--black);
+	color: var(--white);
+}
+
+.header .container {
+	animation: fade-in 2.5s;
+}
+
+.header .logo {
+	max-width: 200px;
+	margin-bottom: -0.5em;
+	transition: .25s ease-in-out;
+	height: auto;
+	width: 200px;
+}
+
+.header .logo:hover {
+	opacity: .6;
+}
+
+
+.header a {
+	color: var(--white);
+	margin: 0 .5rem;
+	text-transform: uppercase;
+	transition: .2s ease-in-out;
+	font-weight: 500;
+}
+
+.header a:hover {
+	color: var(--light-gold);
+}
+
+.header .flex {
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header ul.flex {
+	flex-direction: row;
+}
+
+#specialHamboorgerRoganFinanceDiv{
+	z-index: 89;
+}
+
+
+
+
+/* hero */
+
+.hero {
+	background: var(--black);
+	background-size: cover;
+	height: 90vh;
+	color: var(--white);
+	background-image: url('../images/nukukcc.png');
+	background-size: 20%;
+	background-position: bottom right;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	
+}
+
+
+.hero .container {
+	animation: fade-in 2.5s;
+	z-index: 10;
+  justify-content: start;
+}
+
+
+.hero h1 {
+	padding-bottom: .5em;
+	color: var(--white);
+	padding-right: 30%;
+	
+}
+
+.hero h3 {
+	padding-bottom: .5em;
+	color: var(--white);
+	padding-right: 10%;
+	
+}
+
+.hero p {
+	max-width: none;
+}
+
+
+.hero sup {
+	color: white;
+}
+
+/* style-guide */
+
+.guide-intro .container {
+	animation: fade-in 2.5s;
+}
+
+.guide-intro p,
+.guide-colors p {
+	margin: 1.5rem auto;
+}
+
+.guide-colors {
+	background: #f7f7f7;
+}
+
+.circle {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	margin: 0 auto;
+
+}
+
+.circle-1 {
+	background: var(--black);
+}
+.circle-2 {
+	background: var(--white);
+	border: 1px solid var(--black);
+}
+.circle-3 {
+	background: var(--light-gold);
+}
+
+/* footer */
+
+.footer {
+	background-color: var(--light-gold);
+  overflow: hidden;
+}
+
+.footer p {
+	max-width: none;
+	opacity: .75;
+}
+
+.footer a {
+	color: var(--white);
+	padding: .5rem .5rem;
+	opacity: .75;
+	transition: .23s ease-in-out;
+}
+
+.footer a:hover {
+	opacity: 1;
+}
+
+.footer .logo {
+	max-width: 200px;
+	margin-bottom: -0.5em;
+}
+
+.footer .link {
+	display: block;
+	text-decoration: underline;
+}
+
+.footer section{
+  overflow: hidden;
+}
+
+
+
+/* Devices */
+
+@media(max-width: 768px) {
+	
+	.hero {
+		background-attachment: scroll;
+		background-size: 100%;
+		height: 80vh;
+	}
+
+	.hero .container {
+		padding-bottom: 12em;
+	}
+
+	.hero h1 {
+		padding-right: 0%;
+	}
+
+	.about {
+		background-image: url('../images/jrPoint.png'), linear-gradient(to bottom, var(--light-gold) 0%, rgba(0,0,0,0) 0%);
+		height: 90vh;
+	}
+
+	.about .grid {
+		grid-template-columns: 1fr;
+	}
+
+	.proof::before {
+		content: '';
+		position: absolute;
+		height: 300px;
+		bottom: 750px;
+		left: 0;
+		right: 0;
+		background-image: linear-gradient(to right top, #ad974f, #a58f4b, #9d8846, #968042, #8e793e);
+		transform: skewY(-5deg);
+	
+	}
+
+	.grid {
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr;
+	}
+
+
+ 
+}
+
+/* @media(max-width: 500px) {
+  .container {
+    width: 90%;
+  }
+} */
+
+/* animation */
+
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
