@@ -37,6 +37,9 @@
           <a target="_blank"
             href="http://koffeeswap.exchange/#/swap?outputCurrency=0x73100e33fbae63e34ea0225b5cfffe248b9f7fba"><button
               class="btn">Buy Now</button></a>
+			<br />
+			<br />
+			<br />
           <div id="circSupply"></div>
           <div id="holders"></div>
           <div id="kcsPrice"></div>
@@ -72,12 +75,12 @@
           var lpKcs = document.getElementById("lpKcs")
           var marketcap = document.getElementById("marketcap")
           var tokenUsd = document.getElementById("tokenUsd")
-          circSupply.innerHTML = 'circ supply: ' + result.circSupply;
-          holders.innerHTML = 'holders: ' + result.holders;
-          kcsPrice.innerHTML = 'kcsPrice: ' + result.kcsPrice;
-          lpKcs.innerHTML = 'lpKcs: ' + result.lpKcs;
-          marketcap.innerHTML = 'marketcap: ' + result.marketcap;
-          tokenUsd.innerHTML = 'tokenUsd: ' + result.tokenUsd;
+          circSupply.innerHTML = 'Circulating Supply: ' + result.circSupply;
+          holders.innerHTML = 'Holders: ' + result.holders;
+          kcsPrice.innerHTML = 'KCS Price: $' + result.kcsPrice;
+          lpKcs.innerHTML = 'KCS in Nuku LP: ' + result.lpKcs;
+          marketcap.innerHTML = 'Market Cap: $' + result.marketcap;
+          tokenUsd.innerHTML = 'USD Value: $' + result.tokenUsd;
     })}
 
     setInterval(fetchData, 1000 * 30);
