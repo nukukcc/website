@@ -1,4 +1,61 @@
+/* header */
 
+.header {
+	background: var(--black);
+	color: var(--white);
+}
+
+.header .container {
+	animation: fade-in 2.5s;
+}
+
+.header .logo {
+	max-width: 200px;
+	margin-bottom: -0.5em;
+	transition: .25s ease-in-out;
+	height: auto;
+	width: 200px;
+}
+
+.header .logo:hover {
+	opacity: .6;
+}
+
+
+.header a {
+	color: var(--white);
+	margin: 0 .5rem;
+	text-transform: uppercase;
+	transition: .2s ease-in-out;
+	font-weight: 500;
+}
+
+.header a:hover {
+	color: var(--light-gold);
+}
+
+.header .flex {
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header ul.flex {
+	flex-direction: row;
+}
+
+#specialHamboorgerRoganFinanceDiv{
+	z-index: 89;
+}
+
+
+
+
+/* hero */
+
+.hero {
+	background: var(--black);
+	background-size: cover;
+	height: 165vh;
 	color: var(--white);
 	background-image: url('../images/nukukcc.png');
 	background-size: 20%;
