@@ -1,4 +1,4 @@
-# FreeKCS
-The First True Passive Income Token on Kucoin Community Chain! Hodl and generate KCS!
+# NukuKCC
+Super-deflationary token on Kucoin Community Chain
 
-Website: freekcs.com
+Website: nukukcc.com
