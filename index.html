@@ -37,10 +37,15 @@
           <a target="_blank"
             href="http://koffeeswap.exchange/#/swap?outputCurrency=0x73100e33fbae63e34ea0225b5cfffe248b9f7fba"><button
               class="btn">Buy Now</button></a>
+          <div id="circSupply"></div>
+          <div id="holders"></div>
+          <div id="kcsPrice"></div>
+          <div id="lpKcs"></div>
+          <div id="marketcap"></div>
+          <div id="tokenUsd"></div>
         </div>
     </section>
   </main>
-
   <footer class="footer py-4" id="contact">
     <section class="container text-center">
       <a target="_blank" href="https://t.me/NukuKCC"><i class="fab fa-telegram-plane fa-lg"></i></a>
@@ -49,11 +54,36 @@
 
     </section>
   </footer>
-
+ 
 </body>
 
 <script>
 
+  document.addEventListener('DOMContentLoaded', function () {
+
+    const fetchData = function () {
+    fetch('https://nuku-api.herokuapp.com/api/pricedata')
+			   .then(async data => { 
+          const result = await data.json();
+          console.log(result);
+          var circSupply = document.getElementById("circSupply")          
+          var holders = document.getElementById("holders")
+          var kcsPrice = document.getElementById("kcsPrice")
+          var lpKcs = document.getElementById("lpKcs")
+          var marketcap = document.getElementById("marketcap")
+          var tokenUsd = document.getElementById("tokenUsd")
+          circSupply.innerHTML = 'circ supply: ' + result.circSupply;
+          holders.innerHTML = 'holders: ' + result.holders;
+          kcsPrice.innerHTML = 'kcsPrice: ' + result.kcsPrice;
+          lpKcs.innerHTML = 'lpKcs: ' + result.lpKcs;
+          marketcap.innerHTML = 'marketcap: ' + result.marketcap;
+          tokenUsd.innerHTML = 'tokenUsd: ' + result.tokenUsd;
+    })}
+
+    setInterval(fetchData, 1000 * 30);
+    fetchData();
+
+  });
   //hamburger menu
 
   var menu = document.querySelector(".menu")
