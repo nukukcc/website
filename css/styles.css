@@ -55,7 +55,7 @@
 .hero {
 	background: var(--black);
 	background-size: cover;
-	height: 140vh;
+	height: 130vh;
 	color: var(--white);
 	background-image: url('../images/nukukcc.png');
 	background-size: 20%;
